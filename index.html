@@ -12,9 +12,12 @@
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/font-awesome.min.css" rel="stylesheet">
         <link href="css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-        <script>hljs.highlightAll();</script> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="js/jquery-1.10.2.min.js" defer></script>
+        <script src="js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
     <body class="homepage">
@@ -46,7 +49,7 @@
     </div>
 
     
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-light">
         <ul class="nav flex-column">
             
             <li class="nav-item" data-level="1"><a href="#controlador-de-leitura-pessoal" class="nav-link">Controlador de Leitura Pessoal</a>
@@ -60,6 +63,18 @@
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#arquitetura-do-projeto" class="nav-link">Arquitetura do Projeto</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#diagrama-de-classes" class="nav-link">Diagrama de Classes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#api" class="nav-link">API</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#o-aplicativo" class="nav-link">O APLICATIVO</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -89,7 +104,37 @@
 <p><img alt="CLP1" src="images/doc1.jpg" />
 <img alt="CLP2" src="images/doc2.jpg" />
 <img alt="CLP3" src="images/doc3.jpg" />
-<img alt="CLP4" src="images/doc4.jpg" /></p></div>
+<img alt="CLP4" src="images/doc4.jpg" /></p>
+<h2 id="diagrama-de-classes">Diagrama de Classes</h2>
+<p><img alt="CLP5" src="images/doc5.jpg" /></p>
+<h2 id="api">API</h2>
+<h3 id="classe-colecao">Classe COLEÇÃO:</h3>
+<p><img alt="CLP6" src="images/colecaoGET.jpg" />
+<img alt="CLP7" src="images/colecaoRead.jpg" />
+<img alt="CLP8" src="images/colecaoDelete.jpg" />
+<img alt="CLP9" src="images/colecaoUpdate.jpg" /></p>
+<h3 id="classe-historico">Classe HISTÓRICO:</h3>
+<p><img alt="CLP10" src="images/historicoList.jpg" />
+<img alt="CLP11" src="images/historicoRead.jpg" />
+<img alt="CLP12" src="images/historicoDelete.jpg" />
+<img alt="CLP13" src="images/historicoUpdate.jpg" /></p>
+<h3 id="classe-livro">Classe LIVRO:</h3>
+<p><img alt="CLP14" src="images/livroList.jpg" />
+<img alt="CLP15" src="images/livroRead.jpg" />
+<img alt="CLP16" src="images/livroDelete.jpg" />
+<img alt="CLP17" src="images/livroUpdate.jpg" /></p>
+<h3 id="classe-usuario">Classe USUÁRIO:</h3>
+<p><img alt="CLP18" src="images/usuarioList.jpg" />
+<img alt="CLP19" src="images/usuarioRead.jpg" />
+<img alt="CLP20" src="images/usuarioDelete.jpg" />
+<img alt="CLP21" src="images/usuarioUpdate.jpg" /></p>
+<h2 id="o-aplicativo">O APLICATIVO</h2>
+<h3 id="tela-inicial">Tela Inicial:</h3>
+<p><img alt="CLP22" src="images/tela_inicial.jpg" /></p>
+<h3 id="tela-de-cadastro">Tela de Cadastro</h3>
+<p><img alt="CLP23" src="images/tela_cadastro.jpg" /></p>
+<h3 id="tela-de-login">Tela de Login:</h3>
+<p><img alt="CLP24" src="images/tela_login.jpg" /></p></div>
             </div>
         </div>
 
@@ -97,14 +142,12 @@
             <hr>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
-        <script src="js/jquery-3.6.0.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
         <script>
             var base_url = ".",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="js/base.js"></script>
-        <script src="search/main.js"></script>
+        <script src="js/base.js" defer></script>
+        <script src="search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -114,13 +157,16 @@
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
             </div>
             <div class="modal-body">
-                <p>From here you can search these documents. Enter your search terms below.</p>
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
                 <form>
                     <div class="form-group">
                         <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
                     </div>
                 </form>
-                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+                <div id="mkdocs-search-results"></div>
             </div>
             <div class="modal-footer">
             </div>
@@ -171,6 +217,6 @@
 </html>
 
 <!--
-MkDocs version : 1.5.3
-Build Date UTC : 2023-12-12 21:40:44.445097+00:00
+MkDocs version : 1.1.2
+Build Date UTC : 2024-02-19 20:26:17.103968+00:00
 -->
